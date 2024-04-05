@@ -6,7 +6,7 @@ const siteMetadata = {
   description: `I'm a current college student navigating life's twists and turns. I'm constantly exploring and experimenting and writing is a new way for me to understand myself, to make sense of it all. Feel free to leave a comment or contact me!`,
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: '',
+  siteUrl: 'https://davidumoru.me',
   siteRepo: 'https://github.com/davidumoru/blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
