@@ -17,6 +17,12 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
+          <Link
+            href="/blog/now"
+            className="mt-3 rounded-md border border-gray-300 p-3 font-medium leading-14 text-primary-500 shadow-sm hover:text-primary-600 dark:border-gray-700 dark:hover:text-primary-400"
+          >
+            What I'm doing now
+          </Link>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
