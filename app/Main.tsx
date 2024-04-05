@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import Image from '@/components/Image'
 
 const MAX_DISPLAY = 5
 
@@ -10,19 +11,29 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-          <Link
-            href="/blog/now"
-            className="mt-3 rounded-md border border-gray-300 p-3 font-medium leading-14 text-primary-500 shadow-sm hover:text-primary-600 dark:border-gray-700 dark:hover:text-primary-400"
-          >
-            What I'm doing now
-          </Link>
+        <div className="flex flex-col-reverse justify-between gap-8 pb-8 pt-6 md:flex-row">
+          <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Hi, I'm David :)
+            </h1>
+            <p className="max-w-xl pb-10 text-lg leading-7 text-gray-500 dark:text-gray-400">
+              {siteMetadata.description}
+            </p>
+            <Link
+              href="/blog/now"
+              className="animate-bounce-smooth rounded-md border border-primary-400 px-3 py-3 font-medium text-primary-500 shadow-lg shadow-primary-50 hover:text-primary-600 dark:border-primary-600 dark:shadow-primary-900 dark:hover:text-primary-400"
+            >
+              See What I'm doing now
+            </Link>
+          </div>
+          <Image
+            priority={true}
+            src="/static/images/avatar.png"
+            className="h-24 w-24 rounded-full object-cover shadow-2xl shadow-primary-100 ring-2 ring-primary-400/20  transition delay-100 duration-500  hover:scale-110 dark:shadow-primary-900  dark:ring-primary-100 md:h-48 md:w-48 md:ring-8"
+            alt="Avatar"
+            width="350"
+            height="350"
+          />
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
