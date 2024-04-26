@@ -1,8 +1,8 @@
 interface Project {
-  title: string,
-  description: string,
-  href?: string,
-  imgSrc?: string,
+  title: string
+  description: string
+  href?: string
+  imgSrc?: string
 }
 
 const projectsData: Project[] = [
@@ -14,6 +14,12 @@ const projectsData: Project[] = [
   },
   {
     title: 'FeedWell',
+    description: `Coming Soon`,
+    imgSrc: '',
+    href: '/',
+  },
+  {
+    title: 'Apex',
     description: `Coming Soon`,
     imgSrc: '',
     href: '/',
