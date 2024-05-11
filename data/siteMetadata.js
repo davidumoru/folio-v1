@@ -3,6 +3,7 @@ const siteMetadata = {
   title: 'David Umoru',
   author: 'David Umoru',
   headerTitle: 'David Umoru',
+  image: '/static/images/avatar.png',
   description: `I'm a current college student navigating life's twists and turns. I'm constantly exploring and experimenting and writing is a new way for me to understand myself. Feel free to leave a comment or contact me!`,
   language: 'en-us',
   theme: 'system', // system, dark or light
