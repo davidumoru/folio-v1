@@ -1,5 +1,5 @@
 // @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily, colors: defaultColors } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 /** @type {import("tailwindcss/types").Config } */
@@ -25,7 +25,7 @@ module.exports = {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.cyan,
         gray: colors.gray,
       },
       typography: ({ theme }) => ({
