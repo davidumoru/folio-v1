@@ -8,27 +8,27 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'Scryer',
-    description: `Scryer leverages the power of Gemini, a large language model from Google AI, combined with web scraping techniques to unlock valuable insights from web data.`,
+    description: `Scryer unlocks valuable insights from web data using AI and web scraping techniques.`,
     imgSrc: '/static/images/scryer.png',
     href: 'https://github.com/davidumoru/scryer',
   },
   {
+    title: 'Apex',
+    description: `Apex lets you deploy your frontend applications to the web with minimal effort.`,
+    imgSrc: '/static/images/apex.png',
+    href: 'https://github.com/davidumoru/EtherSeed',
+  },
+  {
     title: 'EtherSeed',
-    description: `EtherSeed is a decentralised crowdfunding platform. Project creators launch campaigns and backers browse projects and contribute crypto to receive project tokens.`,
+    description: `EtherSeed allows users launch project campaigns and crowdfunding using crypto.`,
     imgSrc: '/static/images/etherseed.png',
     href: 'https://github.com/davidumoru/EtherSeed',
   },
   {
     title: 'FeedWell',
     description: `Coming Soon`,
-    imgSrc: '',
-    href: '/',
-  },
-  {
-    title: 'Apex',
-    description: `Coming Soon`,
-    imgSrc: '',
-    href: '/',
+    imgSrc: '/static/images/feedwell.png',
+    href: 'https://github.com/davidumoru/feedwell',
   },
 ]
 
