@@ -1,0 +1,49 @@
+---
+title: 'Testing webhoooks locally with Ngrok'
+date: '2024-06-27'
+# lastmod: '2021-01-18'
+tags: ['Technical', 'Webhooks']
+draft: false
+summary: 'How to test webhooks by using tunneling software, ngrok to expose your local environment to the internet.'
+# images: ['/static/images']
+authors: ['default']
+layout: PostLayout
+canonicalUrl: https://davidumoru.me/blog/local-webhook-test-with-ngrok
+---
+
+Its been a while since my last post. I'd try to post more I swear😭.
+I'd be sharing my first technical post today. It about a problem I faced recently while working on a project.
+I will be sharing what the problem was and how I solved it.
+
+But before we get down and dirty with code, let me take a quick detour. I'm absolutely thrilled to announce that I'll be joining the HNG Internship Program, once again lol.
+I made it to the finals last year in HNGx but you know, I like the thrill, I like the rush. Also, you get to meet some amazing people.
+You can check out the program details [here](https://hng.tech/internship) if you're curious (trust me, it's awesome!).
+
+## The Task
+I was working on an API to allow users to securely make payments on a platform.
+The payment gateway I was using required me to set up a webhook to receive payment notifications.
+
+## The Problem
+So the problem was that I needed to test the webhooks locally but the service I was using required a public URL to send the webhook data to.
+I mean, I could have deployed the project to a server but that would have taken a bit of time and I didn't want to go through that process.
+Plus, I didn't want to deploy the project to a server just for testing.
+
+In my defense, I didn't even know that was the issue at first lol. I was busy logging unecessary stuff and commenting out sections of code, carefully testing after each modification😭.
+Now, this is where the power of community shines. After several attempts, I decided to vent my frustrations in the group chat my group formed at last year's HNG.
+I explained the issue and one of the members (Shoutout to KD) suggested I use a tunneling software to expose my local environment to the internet.
+
+## The Solution
+The funny thing is that I had heard of tunneling software before but I just never really thought about it.
+I used to use ngrok in the past to show my local frontend projects to friends and clients or to test using my phone.
+Anyways, Ngrok a fantastic tool for developers that creates a secure tunnel.
+Imagine this: it transforms your local development environment into a temporarily publicly accessible URL.
+
+I fired it up with `ngrok http 5006`, and voila! My local server had a public URL, allowing the payment gateway to successfully send webhook notifications."
+Please note that for this to work you have to have ngrok setup and installed. Also, replace `5006` with your actual port number.
+For more information on how to use ngrok, you can check out their [documentation](https://ngrok.com/docs).
+
+
+Back to HNG, I think I should make a blog post for every task - the problem and my approach. It'll be a good way to document my progress and share my knowledge with others.
+
+Btw, if you're looking for a place to make friends, find mentors, and connect with a diverse group of developers, designers, and video editors, you can join the [HNG premium network](https://hng.tech/premium).
+There are also events where you can test your knowledge and win, interesting discussions about the latest techie news, free CV reviews, and mock interviews where you can practise your skills.
