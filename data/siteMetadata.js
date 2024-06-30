@@ -14,7 +14,7 @@ const siteMetadata = {
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'umorudavido@gmail.com',
   github: 'https://github.com/davidumoru',
-  twitter: 'https://twitter.com/_davidumoru',
+  twitter: 'https://twitter.com/thedavidumoru',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/david-umoru/',
