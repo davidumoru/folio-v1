@@ -5,6 +5,22 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default function Projects() {
+  const fullstackProjects = projectsData.filter((project) => project.category === 'Fullstack')
+  const backendProjects = projectsData.filter((project) => project.category === 'Backend')
+  const cliProjects = projectsData.filter((project) => project.category === 'CLI')
+
+  const renderProjects = (projects, showImages) => {
+    return projects.map((d) => (
+      <Card
+        key={d.title}
+        title={d.title}
+        description={d.description}
+        imgSrc={showImages ? d.imgSrc : undefined}
+        href={d.href}
+      />
+    ))
+  }
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -17,16 +33,25 @@ export default function Projects() {
           </p>
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
-              <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
-              />
-            ))}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                Fullstack Projects:
+              </h2>
+              <div className="-m-4 flex flex-wrap">{renderProjects(fullstackProjects, true)}</div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                Backend Projects:
+              </h2>
+              <div className="-m-4 flex flex-wrap">{renderProjects(backendProjects, true)}</div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                CLI Projects:
+              </h2>
+              <div className="-m-4 flex flex-wrap">{renderProjects(cliProjects, false)}</div>
+            </div>
           </div>
         </div>
       </div>
