@@ -6,13 +6,13 @@ const siteMetadata = {
   image: '/static/images/avatar.png',
   description: `I'm a current college student navigating life's twists and turns. I'm constantly exploring and experimenting and writing is a new way for me to understand myself. Feel free to leave a comment or contact me!`,
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://davidumoru.me',
   siteRepo: 'https://github.com/davidumoru/blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'umorudavido@gmail.com',
+  email: 'hey@davidumoru.me',
   github: 'https://github.com/davidumoru',
   twitter: 'https://twitter.com/thedavidumoru',
   // facebook: 'https://facebook.com',
