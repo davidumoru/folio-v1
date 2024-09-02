@@ -1,0 +1,49 @@
+---
+title: 'Notes'
+date: '2024-09-02'
+lastmod: '2024-09-02'
+tags: ['the odin project', 'web development', 'learning']
+draft: false
+summary: 'A compiled list of my jottings from learning web development from The Odin Project'
+# images: ['/static/images/blogs/']
+authors: ['default']
+canonicalUrl: https://davidumoru.me/blog/notes
+---
+
+## [Objects and Object Constructors:](https://www.theodinproject.com/lessons/node-path-javascript-objects-and-object-constructors)
+
+1. **Object Literals**: 
+   - Objects in JavaScript can be created using object literals, which is a straightforward way to group related data and functions.
+   - Example: `const person = { name: 'John', age: 30 };`.
+
+2. **Dot and Bracket Notation**:
+   - Access object properties using dot notation (`person.name`) or bracket notation (`person['name']`).
+   - Bracket notation is useful when property names are dynamic or not valid identifiers.
+
+3. **Object Constructors**:
+   - Constructors are functions used to create multiple similar objects. They use the `new` keyword to instantiate objects.
+   - Example: 
+     ```javascript
+     function Person(name, age) {
+       this.name = name;
+       this.age = age;
+     }
+     const john = new Person('John', 30);
+     ```
+
+4. **Prototypes**:
+   - JavaScript objects have a prototype, which is another object from which they inherit properties and methods.
+   - Methods defined on a constructor’s prototype are shared across all instances created by that constructor.
+   - Example: 
+     ```javascript
+     Person.prototype.sayHello = function() {
+       console.log(`Hello, my name is ${this.name}`);
+     };
+     ```
+
+5. **Prototypal Inheritance**:
+   - Objects can inherit properties and methods from other objects. This is the basis for prototypal inheritance in JavaScript, allowing for the creation of more complex object structures.
+
+6. **Benefits of Constructors and Prototypes**:
+   - Using constructors and prototypes helps to avoid redundancy, manage memory efficiently, and organize code better by separating concerns.
+
