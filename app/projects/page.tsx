@@ -34,24 +34,30 @@ export default function Projects() {
         </div>
         <div className="container py-12">
           <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
-                Fullstack Projects:
-              </h2>
-              <div className="-m-4 flex flex-wrap">{renderProjects(fullstackProjects, true)}</div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
-                Backend Projects:
-              </h2>
-              <div className="-m-4 flex flex-wrap">{renderProjects(backendProjects, true)}</div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
-                CLI Projects:
-              </h2>
-              <div className="-m-4 flex flex-wrap">{renderProjects(cliProjects, false)}</div>
-            </div>
+            {fullstackProjects.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                  Fullstack Projects:
+                </h2>
+                <div className="-m-4 flex flex-wrap">{renderProjects(fullstackProjects, true)}</div>
+              </div>
+            )}
+            {backendProjects.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                  Backend Projects:
+                </h2>
+                <div className="-m-4 flex flex-wrap">{renderProjects(backendProjects, true)}</div>
+              </div>
+            )}
+            {cliProjects.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold leading-9 tracking-tight text-primary-500 sm:text-3xl sm:leading-10 md:text-2xl md:leading-14">
+                  CLI Projects:
+                </h2>
+                <div className="-m-4 flex flex-wrap">{renderProjects(cliProjects, false)}</div>
+              </div>
+            )}
           </div>
         </div>
       </div>
