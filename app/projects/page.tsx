@@ -29,7 +29,9 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Some projects I've worked on
+            I’ve recently cleared my projects as I’m working on an exciting revamp. Please check
+            back later to see the new updates! In the meantime, feel free to explore my blogs or
+            check out my GitHub for my latest contributions and work. Thank you for your patience!
           </p>
         </div>
         <div className="container py-12">
