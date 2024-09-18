@@ -1,16 +1,20 @@
 ---
 title: 'Notes'
 date: '2024-09-02'
-lastmod: '2024-09-02'
-tags: ['the odin project', 'web development', 'learning']
+lastmod: '2024-09-18'
+tags: ['javascript', 'technical', 'learning']
 draft: false
-summary: 'A compiled list of my jottings from learning web development from The Odin Project'
+summary: 'A collection of my jottings highlighting the key concept of various topics in JavaScript.'
 # images: ['/static/images/blogs/']
 authors: ['default']
 canonicalUrl: https://davidumoru.me/blog/notes
 ---
 
-## [Objects and Object Constructors:](https://www.theodinproject.com/lessons/node-path-javascript-objects-and-object-constructors)
+
+***NB: I update this from time to time as I learn new things.***
+
+...
+# OBJECTS AND OBJECT CONSTRUCTORS:
 
 1. **Object Literals**: 
    - Objects in JavaScript can be created using object literals, which is a straightforward way to group related data and functions.
@@ -47,3 +51,59 @@ canonicalUrl: https://davidumoru.me/blog/notes
 6. **Benefits of Constructors and Prototypes**:
    - Using constructors and prototypes helps to avoid redundancy, manage memory efficiently, and organize code better by separating concerns.
 
+...
+# FACTORY FUNCTIONS AND THE MODULE PATTERN:
+
+1. **Factory Functions**:
+   - A function that returns an object.
+   - Allows for the creation of multiple objects with similar properties and methods without using `new` keyword or constructors.
+   - Example:
+     ```javascript
+     function createDog(name, breed) {
+         return {
+             name,
+             breed,
+             bark() {
+                 console.log(`${this.name} says woof!`);
+             },
+         };
+     }
+     ```
+
+2. **Benefits of Factory Functions**:
+   - Encapsulation: Keeps the object creation logic within the function.
+   - No need for `new` keyword, preventing common mistakes associated with it.
+
+3. **The Module Pattern**:
+   - A way to encapsulate private variables and expose public methods.
+   - Useful for organizing code and creating modules.
+   - Example:
+     ```javascript
+     const Counter = (() => {
+         let count = 0; // private variable
+
+         return {
+             increment() {
+                 count++;
+                 console.log(count);
+             },
+             reset() {
+                 count = 0;
+             },
+         };
+     })();
+     ```
+
+4. **Encapsulation**:
+   - Protects private data and exposes only necessary parts of the module.
+
+5. **Real-World Application**:
+   - Useful in building libraries, managing state, and organizing code in a clean manner.
+
+6. **Practical Applications**:
+   - Use factory functions to create multiple instances of an object easily.
+   - Implement the module pattern to create namespaces in your code, reducing the likelihood of naming conflicts.
+
+7. **Example Scenarios**:
+   - Creating a Library - Use factory functions for different book objects, and a module pattern to manage the library’s collection.
+   - Game Development - Use factory functions to create characters, and the module pattern to handle game states and logic.
