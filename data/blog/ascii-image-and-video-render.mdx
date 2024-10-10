@@ -11,7 +11,7 @@ layout: PostLayout
 canonicalUrl: https://davidumoru.me/blog/ascii-image-and-video-render
 ---
 
-I recently made a project where with Python that converts images and videos into ASCII art directly in your terminal.
+I recently made a project with Python that converts images and videos into ASCII art directly in your terminal.
 So I decided to write about it; I’ll explain what ASCII art is, how images work, and walk you through my code step by step.
 
 ## What is ASCII Art?
@@ -218,7 +218,19 @@ if __name__ == "__main__":
     main()
 ```
 
-### Example Usage
+Here’s how you could introduce the Mermaid diagram in your blog post:
+
+---
+
+### Flow of the Main Function
+
+To give you a clearer understanding of the control flow in this script, here’s a visual representation using a flowchart:
+
+![Flowchart](https://raw.githubusercontent.com/davidumoru/blog/main/public/static/images/ascii-render-flowchart.png)
+
+This diagram illustrates how the script handles both image and video files, processes them, and then converts them into ASCII art.
+
+## Example Usage
 
 To run the script, you need to provide the image or video file as an argument in the terminal. Here’s an example command:
 
@@ -228,7 +240,7 @@ python ascii_art_converter.py your_image.png -c
 
 This command will convert `your_image.png` into ASCII art and display it in color.
 
-### Visual Example
+## Visual Example
 
 Here is an example of the output you can expect from the program:
 
